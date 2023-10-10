@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const url = "mongodb://127.0.0.1:27017/students";
-mongoose.connect(url, {
+const url1 = `mongodb+srv://amadirfan443:gTqJrbaWEKoPaJ4U@cluster0.xqm7ufv.mongodb.net/`;
+// const url = "mongodb://127.0.0.1:27017/students";
+mongoose.connect(url1, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
