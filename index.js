@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
 	// console.log("Received a request:");
 	console.log(`${req.method} : ${req.headers.host}${req.url} `);
-	console.log(req.statusCode);
+	// console.log(req.statusCode);
 	next();
 });
 
