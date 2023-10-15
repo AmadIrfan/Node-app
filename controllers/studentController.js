@@ -3,7 +3,6 @@ const studentModels = require("../models/studentModels");
 async function getStudents(req, res) {
 	try {
 		let stud = await studentModels.find();
-
 		res.status(200).json({
 			status: "ok",
 			status_code: 200,
@@ -57,8 +56,7 @@ async function deleteStudents(req, res) {
 	try {
 		let id = req.params.id;
 		let stu = await studentModels.findByIdAndDelete(id);
-		console.log(stu);
-		console.log(!stu);
+		console.log(id);
 		if (!stu) {
 			res.status(500).json({
 				status_code: 500,

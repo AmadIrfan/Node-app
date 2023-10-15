@@ -4,6 +4,7 @@ const db = require("./utils/db");
 const cors = require("cors");
 
 require("dotenv").config();
+
 const body_parser = require("body-parser");
 
 const students = require("./routes/studentRoute");
@@ -15,9 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
-	// console.log("Received a request:");
 	console.log(`${req.method} : ${req.headers.host}${req.url} `);
-	// console.log(req.statusCode);
 	next();
 });
 
